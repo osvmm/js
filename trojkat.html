@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function oblicz(){
+                var d = parseInt(d1.value);
+                var x = parseInt(x1.value);
+
+                var c = Math.floor(Math.sqrt((x*x)+(d*d)));
+                var h = Math.round(Math.atan(d/x)*180/Math.PI*100)/100;
+                document.getElementById("drabina1").innerHTML = c;
+                document.getElementById("alfa1").innerHTML = h;
+            }
+        </script>
+    </head>
+
+    <body>
+        Pobliczanie odległości od drabiny <br>
+        Podaj d= <input type="number" id="d1">
+        Podaj x= <input type="number" id="x1">
+        <br><br>
+        <input type="submit" onclick="oblicz()">
+        <br><br>
+        Drabina= <span id="drabina1"></span>
+        <br>
+        Alfa= <span id="alfa1"></span>
+    </body>
+</html>
