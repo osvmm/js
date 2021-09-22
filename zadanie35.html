@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function wyswietlDate(){
+                var Today = new Date();
+                var Month = (Today.getMonth()+1);
+                var Day = Today.getDate();
+                var Year = Today.getFullYear();
+                if(Year <= 99) Year += 1900
+                    return Day + "-" + Month + "-" + Year;
+            }
+
+            var dane = {
+                data: wyswietlDate(),
+                przegladarka: navigator.appName,
+                wersja: navigator.appVersion,
+                alldata: navigator.userAgent,
+                tryb: navigator.onLine,
+                obsluga:navigator.javaEnabled(),
+            }
+            
+            document.write("Oskar Malec dzisiejsza data " + dane.data + "<br>");
+            document.write("Przegladarka= " + dane.przegladarka+"<br>");
+            document.write("Wersja przegladarki= " + dane.wersja+"<br>");
+            document.write("Wszystkie dane przegladarki= " + dane.alldata+"<br>");
+            document.write("Tryb pracy przegladarki= " + dane.tryb+"<br>");
+            document.write("Obsluga Java= " + dane.obsluga+"<br>");
+        </script>
+    </head>
+
+    <body>
+
+    </body>
+</html>
