@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Burgundia Oskar Malec</title>
+        <style>
+            body{
+                margin: 0;
+                font-size: 30px;
+                font-family: sans-serif;
+                font-weight: 1000;
+            }
+
+            #tytul{
+                background-color: green;
+                width: 100%;
+                height: 200px;
+            }
+
+            #lewy{
+                background-color: red;
+                width: 50%;
+                height: 600px;
+                float: left;
+            }
+
+            #prawy{
+                background-color: blue;
+                width: 50%;
+                height: 600px;
+                float: left;
+            }
+
+            #stopka{
+                display: inline-block;
+                background-color: #800020;
+                width: 100%;
+                height: 200px;
+                clear: both;
+            }
+            
+        </style>
+
+        <script>
+            function kolorczcionki(){
+                var kolor = Math.floor(Math.random()*99999)+666666;
+                document.getElementById("tytul").style.color = "#"+kolor;
+            }
+            function losuj(){
+                let x =  Math.floor(Math.random()*20) + 2;  
+                return x;  
+            }
+
+            function armia(){
+                kolorczcionki();
+                let m = document.getElementById("MUSZ").value;
+                let k = document.getElementById("KAW").value;
+                let a = document.getElementById("ART").value;
+                document.getElementById("mojaarmia").innerHTML = m + " muszkieterów <br>" + k + " kawalerzystów <br>" + a + " artylerzystów";
+            }
+
+            function warmia(){
+                kolorczcionki();
+                let m = document.getElementById("MUSZ").value;
+                let k = document.getElementById("KAW").value;
+                let a = document.getElementById("ART").value;
+                document.getElementById("wrogaarmia").innerHTML = Math.pow(m,losuj()) + " muszkieterów <br>" + Math.pow(k,losuj()) + " kawalerzystów <br>"+ Math.pow(a,losuj()) + " artylerzystów <br>";
+            }
+        </script>
+    </head>
+
+    <body>
+        <div id="tytul">
+            <a href="https://pl.wikipedia.org/wiki/Burgundia">
+                <img src="burgundia.png">
+            </a>
+            <p style="text-align: center;">Bitwy europejskie</p>
+        </div>
+        <div id="lewy">
+            Moja armia składa się z:
+            <p id="mojaarmia"></p>
+            Wroga armia składa się z:
+            <p id="wrogaarmia"></p>
+        </div>
+
+        <div id="prawy">
+            Podaj liczbe muszkieterów
+            <input type="number" id="MUSZ"><br>
+            Podaj liczbe kawalerzystów
+            <input type="number" id="KAW"><br>
+            Podaj liczbe artylerzystów
+            <input type="number" id="ART"><br>
+            <input type="submit" onclick="armia()" value="Oblicz moja armie">
+            <input type="submit" onclick="warmia()" value="Oblicz wroga armie">
+        </div>
+
+        <div id="stopka">
+            <img src=rycerz.gif width=200px height=200px>
+            <img src=smok.gif width=200px height=200px style="margin-left:630px;">
+        </div>
+    </body>
+</html>
