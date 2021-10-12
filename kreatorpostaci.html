@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kreator postaci</title>
+    <script src="skryptklasy.js"></script>
+    <style>
+        body{
+            margin: 0;
+            font-family: Helvetica;
+            font-size: 17px;
+            font-weight: 500;
+        }
+
+        #lewo{
+            float: left;
+        }
+
+        #prawo{
+            float: left;
+        }
+
+        #prawo2{
+            float: left;
+            margin-left: 20px;
+        }
+
+        #prawo2 img{
+            width: 100px;
+            height: 100px;
+        }
+
+        #lewo img{
+            width: 250px;
+            height: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="lewo">
+        <img src="" id="zdjecie" style="float: left;">
+    </div>
+    
+    <div id="prawo">
+        Nick <input type="text" id="nick"><br>
+        Klasa 
+        <select id="nazwaklasy" onchange="klasa();">
+            <option selected>--Wybierz klase--</option>
+            <option value="1">Assasin</option>
+            <option value="2">Druid</option>
+            <option value="3">Necromancer</option>
+        </select>
+
+        <p id="wynik">
+            Nick: <br>
+            Klasa: <br><br>
+    
+            HP: <br>
+            MANA: <br>
+            STRENGTH: <br>
+            AGILITY: <br>
+            INTELLIGENCE: <br>
+            GOLD: <br>
+        </p>
+    </div>
+
+    <div id="prawo2">
+        EQ:
+        <p id="wynik2"></p>
+        <img src="" id="item" style="float: left;">
+    </div>
+    
+</body>
+</html>
