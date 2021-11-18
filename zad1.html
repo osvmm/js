@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+    <head><meta charset="UTF-8"></head>
+    <body>
+        <p style="font-size: 46px; text-align: right;">Mlodzianowski</p>
+        <input id="nl" type="number">
+        <input type="button" onclick="oblicz()" value="silnia">
+        <button onclick="fib()" value="Fibonacci">Fibonacci</button>
+        <button onclick="los()" value="Losowanie">Losowanie</button>
+        <div id="wynik"></div>
+
+        <script>
+		
+		 function oblicz()
+		 {	
+				var n=nl.value;	
+				function silnia(n){
+				if(n==0){
+					return 1;}
+				else return n*silnia(n-1);
+			}
+			wynik.innerHTML=silnia(n);
+		}
+            function los(){
+                var los = Math.random() * 100 + 1;
+                wynik.innerHTML=Math.floor(los);
+            }
+            function fib(){
+                {	
+				var n=nl.value;	
+				function fib(n){
+				if(n<3){
+					return 1;}
+				else return fib(n-1)+fib(n-2);
+			}
+			wynik.innerHTML=fib(n);
+		}
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script> 
+            function wiezowiec(wysokosc, kondygnacje, pomieszczen, data)
+            {
+                this.wysokosc = wysokosc;
+                this.kondygnacje = kondygnacje;
+                this.pomieszczen = pomieszczen;
+                this.data = data;
+            }
+            wiezowiec.prototype.wypisz = function(){document.write("Wieżowiec Wysokość: "+this.wysokosc+" Kondygnacje: "+this.kondygnacje+" Ilość pomieszczeń: "+this.pomieszczen+" Rok zakończenia budowy: "+this.data+"<br>");}
+                var  w1= new wiezowiec('237 m','42','3288','1955 rok');
+                w1.wypisz();
+                var  w2= new wiezowiec('325 m','60','5214','2012 rok');
+                w2.wypisz();
+                var  w3= new wiezowiec('198 m','40','3166','2008 rok');
+                w3.wypisz();
+        </script>
+    </body>
+</html>

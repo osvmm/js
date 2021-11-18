@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zniżki</title>
+    <script>       
+        function oblicz(){
+            var a = document.getElementById("produkt").value;
+            var b = document.getElementById("ilosc").value;
+            var d = document.getElementById("znizka").checked;
+
+            var vat1 = document.getElementById("vat1").value;
+            var vat2 = document.getElementById("vat2").value;
+            var vat3 = document.getElementById("vat3").value;
+
+            switch (a) {
+                case "Buraki":
+                    document.getElementById("cena").value = 6;
+                    if (d==true) {
+                        document.getElementById("wynik").innerHTML = (6*b)*0.9;
+                    } else {
+                        document.getElementById("wynik").innerHTML = 6*b;
+                        
+                    }
+                    break;
+
+                case "Ziemniaki":
+                    document.getElementById("cena").value = 4.5;
+                    if (d==true) {
+                        document.getElementById("wynik").innerHTML = (4.5*b)*0.9;
+                    } else {
+                        document.getElementById("wynik").innerHTML = 4.5*b;
+                        
+                    }
+                    break;
+
+                case "Ogórki":
+                    document.getElementById("cena").value = 3;
+                    if (d==true) {
+                        document.getElementById("wynik").innerHTML = (3*b)*0.9;
+                    } else {
+                        document.getElementById("wynik").innerHTML = 3*b;
+                        
+                    }
+                    break;
+            
+                default:
+                    break;
+            }
+        }
+    </script>
+</head>
+<body>
+    Produkt <select id="produkt">
+        <option value="Buraki">Buraki</option>
+        <option value="Ziemniaki">Ziemniaki</option>
+        <option value="Ogórki">Ogórki</option>
+    </select>
+    <input type="number" id="cena" disabled> zł za kg<br>
+    Podatek VAT:
+    <input type="radio" value="23%" name="vat" id="vat1">
+    <label>23%</label>
+    <input type="radio" value="18%" name="vat" id="vat2">
+    <label>18%</label>
+    <input type="radio" value="5%" name="vat" id="vat3">
+    <label>5%</label>
+    <br>
+    Ilość kg: <input type="number" id="ilosc"> <br>
+    Zniżka 10% <input type="checkbox" id="znizka"> <br>
+    <input type="button" value="Oblicz" onclick="oblicz()"> <br>
+    Koszt wynosi: <span id="wynik"></span>
+</body>
+</html>

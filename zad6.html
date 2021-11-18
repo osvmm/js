@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            var osoba_1 =
+            {
+                nazwisko :'Robert',
+                imie :'Lewandowski',
+                zawod :'pilkarz',
+                wyświetl :function()
+                {
+                    document.write(this.nazwisko+' '+this.imie+' <br>zawód: '+this.zawod);
+                }
+            }
+            var Tiktoker =
+            {
+                wyświetlenia :1234,
+                obserwujący :300,
+                zajęcie :'lezy',
+                zawod :'bezrobotny',
+                zarobki :function() 
+                {
+                    document.write('<br>Zarobki: '+(this.obserwujący/1000)+' zł');
+                },                
+                wyświetl :function()
+                {
+                    document.write('Wyświetlenia: '+this.wyświetlenia+' Obserwujących: '+this.obserwujący+' <br>zawód: '+this.zawod +' zajęcie: '+this.zajęcie);
+                }
+
+
+            }
+        </script>
+        <input type="button" onclick="osoba_1.wyświetl()" value="Wyświetl">
+        <input type="button" onclick="Tiktoker.wyświetl()" value="Wyświetl">
+        <input type="button" onclick="Tiktoker.zarobki()" value="Wyświetl">
+    </body>
+</html>
